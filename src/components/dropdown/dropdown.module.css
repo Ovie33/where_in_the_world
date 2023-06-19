@@ -1,0 +1,23 @@
+.dropdownListContainer {
+  padding: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.dropdownListContainer:hover {
+  background-color: hsl(0, 2%, 91%);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dropdownList {
+  list-style: none;
+  width: 100%;
+}
+
+.dropdownLink {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 5px;
+  letter-spacing: 0.25px;
+  font-size: 14px;
+}

@@ -1,0 +1,192 @@
+.container {
+  max-width: 1440px;
+  max-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  background-color: hsl(0, 0%, 98%);
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  padding: 20px 70px;
+  width: 100%;
+  height: 100%;
+  max-height: 70px;
+  background: #ffff;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  margin-bottom: 70px;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0px 2px 5px hsl(0, 2%, 91%);
+}
+
+.navText {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.darkMode {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+/* end of navbar */
+
+/* dropdown and search */
+
+.search {
+  display: flex;
+  width: 100%;
+  max-height: 55px;
+  height: 100%;
+  position: sticky;
+  top: 100px;
+  margin-bottom: 70px;
+  justify-content: space-between;
+  padding: 0px 70px;
+}
+
+.input_search {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  max-height: 55px;
+  height: 100%;
+  background: #ffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px hsl(0, 2%, 91%);
+}
+
+.inputBox {
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+  width: 100%;
+  margin-left: 30px;
+  outline: none;
+}
+
+.dropdownContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  position: relative;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  max-height: 55px;
+  min-height: 55px;
+  margin-bottom: 10px;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px hsl(0, 2%, 91%);
+  background-color: #ffff;
+  cursor: pointer;
+}
+
+.dropdownIconContainer {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+.dropdownHeader {
+  margin-right: 20px;
+}
+
+.dropdownItems {
+  position: relative;
+  margin-bottom: 35px;
+  background-color: #ffff;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px hsl(0, 2%, 91%);
+}
+
+.list {
+  position: relative;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  gap: 7px;
+}
+/* end of dropdown and search */
+
+/* card body */
+
+.cardContainer {
+  padding: 0 70px;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* responsiveness */
+
+@media only screen and (max-width: 500px) {
+  .navbar {
+    padding: 40px 15px;
+    margin-bottom: 25px;
+  }
+
+  .navText {
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .darkMode {
+    font-size: 14px;
+  }
+
+  .search {
+    padding: 0 15px;
+    max-height: fit-content;
+    margin-bottom: 25px;
+    flex-direction: column;
+  }
+
+  .input_search {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .dropdownContainer {
+    width: 60%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .dropdown {
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .dropdownItems {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+  }
+}

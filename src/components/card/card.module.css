@@ -1,0 +1,50 @@
+.container {
+  max-width: 275px;
+  max-height: 350px;
+  width: 275px;
+  height: 350px;
+  margin-bottom: 70px;
+  border-radius: 5px;
+  background-color: #ffff;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px hsl(0, 2%, 91%);
+}
+
+.imgContainer {
+  width: 100%;
+  height: 175px;
+}
+
+.image {
+  width: 100%;
+  height: 175px;
+  background-size: contain;
+  border-radius: 5px 5px 0 0;
+}
+
+.textBox {
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.details {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+.spanDetails {
+  font-weight: 100;
+}
+
+.detailsText {
+  margin-bottom: 10px;
+}
