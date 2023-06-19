@@ -1,5 +1,5 @@
 .container {
-  max-width: 1440px;
+  max-width: 100vw;
   max-height: 100%;
   height: 100%;
   display: flex;
@@ -110,6 +110,11 @@
 
 .dropdownHeader {
   margin-right: 20px;
+}
+
+.searchButton {
+  width: 20%;
+  height: 100%;
 }
 
 .dropdownItems {

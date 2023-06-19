@@ -91,7 +91,7 @@ function Details() {
                     </div>
                   </div>
                 </div>
-                <div className={style.border}>
+                {/* <div className={style.border}>
                   <div>
                     <p className={style.borderText}>Border Countries:</p>
                   </div>
@@ -102,7 +102,7 @@ function Details() {
                       <BorderCard name={item.borders[2]} />
                     </div>
                   }
-                </div>
+                </div> */}
               </div>
             </div>
           );
