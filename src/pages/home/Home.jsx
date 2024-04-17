@@ -14,6 +14,7 @@ function Home() {
   const [display, setDisplay] = useState("none");
 
   const [input, setInput] = useState("");
+  const [region, setRegion] = useState("");
 
   const fetchItems = async () => {
     const data = await fetch("https://restcountries.com/v3.1/all");
@@ -23,6 +24,12 @@ function Home() {
 
   const fetchSearchItems = async () => {
     const data = await fetch(`https://restcountries.com/v3.1/name/${input}`);
+    const Data = await data.json();
+    setItems(Data);
+  };
+  const fetchSearchItemsRegion = async (name) => {
+    const data = await fetch(`https://restcountries.com/v3.1/region/${name}`);
+    console.log(data);
     const Data = await data.json();
     setItems(Data);
   };
@@ -47,10 +54,6 @@ function Home() {
           <div>
             <p className={style.navText}>Where in the world?</p>
           </div>
-          <div className={style.darkMode}>
-            <FontAwesomeIcon className={style.icon} icon={faMoon} />
-            Dark Mode
-          </div>
         </div>
         <div className={style.search}>
           <div className={style.input_search}>
@@ -74,11 +77,10 @@ function Home() {
               </div>
             </div>
             <div className={style.dropdownItems} style={{ display }}>
-              <Dropdown name={"Africa"} />
-              <Dropdown name={"America"} />
-              <Dropdown name={"Asia"} />
-              <Dropdown name={"Europe"} />
-              <Dropdown name={"Ocenia"} />
+              <Dropdown name={"Africa"} onClick={fetchSearchItemsRegion} />
+              <Dropdown name={"America"} onClick={fetchSearchItemsRegion} />
+              <Dropdown name={"Asia"} onClick={fetchSearchItemsRegion} />
+              <Dropdown name={"Europe"} onClick={fetchSearchItemsRegion} />
             </div>
           </div>
         </div>
